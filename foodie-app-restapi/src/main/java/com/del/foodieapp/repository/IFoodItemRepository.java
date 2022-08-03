@@ -1,0 +1,15 @@
+package com.del.foodieapp.repository;
+
+import java.time.LocalDate;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+
+import com.del.foodieapp.model.FoodItem;
+
+public interface IFoodItemRepository extends JpaRepository<FoodItem, Long> 
+{
+	public FoodItem findByItemName(String itemName);
+	
+	
+}

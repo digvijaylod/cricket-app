@@ -1,0 +1,9 @@
+spring.datasource.url = jdbc:mysql://localhost:3306/foodie_db
+spring.datasource.username = root
+spring.datasource.password = olay7total
+
+spring.datasource.driver-class-name = com.mysql.cj.jdbc.Driver
+
+spring.jpa.show-sql=true
+spring.jpa.hibernate.ddl-auto=auto
+spring.jpa.database-platform=org.hibernate.MySQL8Dialect

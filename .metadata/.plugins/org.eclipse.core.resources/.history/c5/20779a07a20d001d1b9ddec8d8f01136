@@ -1,0 +1,5 @@
+package com.del.githubapi.model;
+
+public class User {
+
+}

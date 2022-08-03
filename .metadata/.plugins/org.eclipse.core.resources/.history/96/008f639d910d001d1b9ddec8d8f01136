@@ -1,0 +1,5 @@
+package com.del.github.service;
+
+public interface IUserService {
+
+}

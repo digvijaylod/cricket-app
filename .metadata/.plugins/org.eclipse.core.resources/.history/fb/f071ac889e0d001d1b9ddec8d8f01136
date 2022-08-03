@@ -1,0 +1,23 @@
+package com.del.github.api.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+
+import com.del.github.api.model.User;
+import com.del.github.service.IUserService;
+
+public class UserController 
+{
+	@Autowired
+	private IUserService service;
+	
+	@GetMapping("/user/{userName}")
+	public User getUser(@PathVariable("userName") String userName)
+	{
+	return service.getByUserName(userName);
+	}
+			
+			
+
+}

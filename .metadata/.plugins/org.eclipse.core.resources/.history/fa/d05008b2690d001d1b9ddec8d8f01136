@@ -1,0 +1,23 @@
+package com.del.foodieapp.model;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+import lombok.Data;
+
+@Data
+public class Meal 
+{
+	@JsonProperty("idmeal")
+	private long mealId;
+	@JsonProperty("strmeal")
+    private String mealName;
+	@JsonProperty("strCategory")
+    private String Category;
+	@JsonProperty("strArea")
+	private String region;
+	@JsonProperty("strInstructions")
+    private String instructions;
+	@JsonProperty("strMealThumb")
+	private String mealThumb;
+
+}

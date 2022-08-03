@@ -1,0 +1,8 @@
+package com.deloitte.githubapp.service;
+
+import com.deloitte.githubapp.model.User;
+
+public interface IUserService {
+	public User getByUsername(String username);
+	public User saveByUsername(String username);
+}

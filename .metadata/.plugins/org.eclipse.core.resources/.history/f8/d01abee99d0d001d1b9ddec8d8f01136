@@ -1,0 +1,11 @@
+package com.del.github.api.repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.del.github.api.model.User;
+
+public interface IUserRepository extends JpaRepository<User, Long> 
+{
+	public User findByUserName(String UserName);
+	
+}

@@ -1,0 +1,17 @@
+package com.del.foodieapp.model;
+
+import lombok.Data;
+
+@Data
+
+public class FoodItem 
+{
+	private long itemCode;
+	private String itemName;
+	private float price;
+	private ItemType intemType;
+	
+	
+	
+
+}

@@ -1,0 +1,5 @@
+package com.del.github.api.controller;
+
+public class UserController {
+
+}

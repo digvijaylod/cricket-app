@@ -1,0 +1,13 @@
+package com.del.foodie.app.eureka;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class FoodieAppEurekaServerApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(FoodieAppEurekaServerApplication.class, args);
+	}
+
+}

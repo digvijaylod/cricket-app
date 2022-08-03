@@ -1,0 +1,5 @@
+package com.del.foodieapp.repository;
+
+public interface IFoodItemRepository {
+
+}

@@ -1,0 +1,15 @@
+package com.del.github.service;
+
+import com.del.github.api.model.User;
+
+public class UserService implements IUserService
+{
+
+	@Override
+	public User getByUserName(String userName) 
+	{
+		
+		return 
+	}
+
+}

@@ -1,0 +1,5 @@
+package com.del.foodieapp.service;
+
+public class RecipeServiceImpl {
+
+}

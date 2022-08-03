@@ -1,0 +1,11 @@
+package com.del.github.service;
+
+import com.del.github.api.model.User;
+
+
+public interface IUserService 
+{
+
+	public User getByUserName(String userName);
+
+}

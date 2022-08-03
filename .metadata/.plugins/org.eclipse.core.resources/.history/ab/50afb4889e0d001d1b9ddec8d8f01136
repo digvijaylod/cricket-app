@@ -1,0 +1,30 @@
+package com.del.github.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.web.client.RestTemplate;
+
+import com.del.github.api.model.User;
+import com.del.github.api.repository.IUserRepository;
+
+public class UserServiceImpl implements IUserService
+{
+	@Autowired
+	private IUserRepository repo;
+	
+	@Autowired
+	private RestTemplate gitUserApiClient;
+	
+	@Value("${githubApiurl}")
+	private String gitApiUrl;
+
+	@Override
+	public User getByUserName(String userName) 
+	{
+		
+		User user = gitUserApiClient.getForObject(gitApiUrl + userName, User.class);	
+		repo.save(user);
+		return user; 
+	}
+
+}

@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: foodie-api-gateway
+
+  cloud:
+    gateway:
+      routes:
+        - id: menu-service
+          uri:
+            lb://FOOIDE-APP-MENU-SERVICE
+          predicates:
+          - Path=/menu/**
+          
+        - id: recipe-service
+          uri:
+            lb://FOODIE-APP-RECIPE-SERVICE
+          predicates:
+          - Path=/recipe/**
+        
+ 
+

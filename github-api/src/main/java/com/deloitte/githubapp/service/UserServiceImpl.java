@@ -1,0 +1,42 @@
+package com.deloitte.githubapp.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Service;
+import org.springframework.web.client.RestTemplate;
+
+import com.deloitte.githubapp.model.User;
+
+@Service
+public class UserServiceImpl implements IUserService {
+	@Autowired
+	//@Qualifier("gitApiBean")
+	private RestTemplate gitUserApiClient;
+	
+	@Autowired
+	//@Qualifier("favApiBean")
+	private RestTemplate favUserApiClient;
+	
+	@Value("${githubApiUrl}")
+	private String gitApiUrl;
+	
+	@Value("${favouriteApiUrl}")
+	private String favApiUrl;
+	
+	@Override
+	public User getByUsername(String userName) {
+		User user = gitUserApiClient.getForObject(gitApiUrl+userName, User.class);
+		return user;
+	}
+
+	@Override
+	public User saveByUsername(String username) {
+		User user = getByUsername(username);
+		System.out.println(user);
+		System.out.println(favApiUrl+username);
+		User user1 = favUserApiClient.postForObject(favApiUrl+username, user, User.class);
+		return user1;
+	}
+
+}

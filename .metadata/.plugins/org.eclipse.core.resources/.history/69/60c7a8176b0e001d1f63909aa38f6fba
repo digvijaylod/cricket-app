@@ -1,0 +1,7 @@
+githubApiUrl = https://api.github.com/users/
+
+favouriteApiUrl =http://localhost:8091/
+
+server.port = 8002
+
+spring.application.name=user-service
