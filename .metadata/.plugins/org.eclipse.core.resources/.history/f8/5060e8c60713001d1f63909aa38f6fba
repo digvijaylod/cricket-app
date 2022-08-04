@@ -1,0 +1,10 @@
+package com.del.cricket.app.service;
+
+import com.del.cricket.app.model.Player;
+
+public interface IService 
+{
+	public Player getByUsername(String playerName);
+	public Player saveByUsername();
+
+}

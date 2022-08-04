@@ -1,0 +1,5 @@
+cricketDataApiUrl = https://api.cricapi.com/v1/players?apikey=ef0ea29d-884e-4b20-b6e0-ce9fbcd063c6&offset=0&search=
+
+cricketDataApiUrl2 = https://api.cricapi.com/v1/players?apikey=ef0ea29d-884e-4b20-b6e0-ce9fbcd063c6
+
+server.port = 8099

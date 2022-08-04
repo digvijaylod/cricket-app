@@ -1,0 +1,9 @@
+package com.del.cricketapp.service;
+
+import com.del.cricketapp.model.PlayerData;
+
+public interface IService 
+{
+	public PlayerData getByPlayername(String playerName);
+	public PlayerData getAllPlayers();
+}

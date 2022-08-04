@@ -1,0 +1,14 @@
+package com.del.cricket.app.favourite.service.services;
+
+
+import java.util.List;
+
+import com.del.cricket.app.favourite.service.model.Favourite;
+
+
+public interface FavouriteServiceInterface {
+	
+	public List<Favourite> getFavourites();
+	public void addFavourite(String id);
+	public void getPlayerInfo(String id);
+}

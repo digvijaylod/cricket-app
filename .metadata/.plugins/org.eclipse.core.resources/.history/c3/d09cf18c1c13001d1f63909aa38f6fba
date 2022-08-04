@@ -1,0 +1,42 @@
+package com.del.cricketapp.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Service;
+import org.springframework.web.client.RestTemplate;
+
+import com.del.cricketapp.model.Player;
+import com.del.cricketapp.model.Stats;
+
+@Service
+public class ServiceImpl implements IService
+{
+	@Autowired
+	private RestTemplate cricketApiClient;
+	
+	@Value("${cricketDataApiUrl}")
+	private String cricketApiUrl;
+	
+	@Value("${cricketDataApiUrl2}")
+	private String cricketApiUrl2;
+	
+	@Override
+	public Stats getByPlayername(String playerName) 
+	{
+		Stats player = cricketApiClient.getForObject(cricketApiUrl+playerName , Stats.class);
+		return player;
+	}
+
+
+	@Override
+	public Stats getAllPlayers() 
+	{
+		return cricketApiClient.getForObject(cricketApiUrl2, Stats.class);
+	}
+
+	
+	
+
+}

@@ -1,0 +1,5 @@
+package com.del.cricketapp.model;
+
+public class Statistics {
+
+}

@@ -1,0 +1,16 @@
+package com.del.cricket.app.service;
+
+import java.util.List;
+
+import org.springframework.stereotype.Service;
+
+import com.del.cricket.app.model.Player;
+import com.del.cricket.app.model.Stats;
+
+
+@Service
+public interface IService 
+{
+	public Player getByPlayername(String playerName);
+	public Stats getAllPlayers();
+}

@@ -1,0 +1,32 @@
+package com.del.cricketapp.controller;
+
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.del.cricketapp.model.Player;
+import com.del.cricketapp.model.Stats;
+import com.del.cricketapp.service.IService;
+
+@RestController
+@RequestMapping("/player")
+public class Controller 
+{
+	@Autowired
+	private IService service;
+	
+	@GetMapping("/{player-name}")
+	public Stats getPlayer(@PathVariable("player-name") String playerName) {
+		System.out.println("controller");
+		return service.getByPlayername(playerName);
+	}
+	
+	@GetMapping("/")
+	public Stats getAllPlayer()
+	{
+		return service.getAllPlayers();
+	}
+}

@@ -1,0 +1,5 @@
+package com.del.cricket.app.favourite.service.model;
+
+public class Player {
+
+}

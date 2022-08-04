@@ -1,0 +1,7 @@
+
+playerSearchUrl =https://api.cricapi.com/v1/players?apikey=8ea28a7e-48c9-4791-98da-d90cf5ddb789&offset=0&search=
+playerStatsUrl =https://api.cricapi.com/v1/players_info?apikey=8ea28a7e-48c9-4791-98da-d90cf5ddb789&id=
+
+spring.application.name=cricket-player-app-service
+
+server.port = 8099

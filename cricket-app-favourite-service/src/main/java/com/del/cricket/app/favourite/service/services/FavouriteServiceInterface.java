@@ -10,5 +10,4 @@ public interface FavouriteServiceInterface {
 	
 	public List<Favourite> getFavourites();
 	public void addFavourite(String id);
-
 }

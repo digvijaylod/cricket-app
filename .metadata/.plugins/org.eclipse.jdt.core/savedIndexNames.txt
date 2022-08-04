@@ -24,7 +24,6 @@ INDEX VERSION 1.131+C:\Users\ddattatraythorat\Documents\workspace-spring-tool-su
 274293832.index
 3445487056.index
 324432819.index
-32192117.index
 2623605460.index
 2284181827.index
 3334671737.index

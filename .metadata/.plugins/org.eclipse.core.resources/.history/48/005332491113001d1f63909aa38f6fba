@@ -1,0 +1,12 @@
+package com.del.cricketapp.model;
+
+import java.util.List;
+
+import lombok.Data;
+
+@Data
+public class Stats 
+{
+	private List<Player> player;
+
+}
